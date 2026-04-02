@@ -1,0 +1,78 @@
+/* === Blurry Background === */
+body::before {
+    content: "";
+    background: url('https://img.freepik.com/premium-photo/cute-anime-girl-wallpaper_776894-106531.jpg?semt=ais_hybrid&w=740') no-repeat center center/cover;
+    filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* === Base Layout === */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: transparent;
+    /* changed from solid color */
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+}
+
+/* === Headings === */
+h1,
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* === Form === */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* === Input === */
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* === Button === */
+button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* === Quotes List === */
+ul {
+    list-style-type: "💬 ";
+    padding-left: 20px;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.85);
+    /* translucent white for blur */
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
