@@ -7,7 +7,10 @@ public class ArrayMer {
         
       
         for (int i = 0; i <a.length; i++) {
-            System.out.print(a[i] + "  "+ b[i]+" ");
+            System.out.print(a[i] + "  ");
+        }
+        for(int i=0;i<b.length;i++){
+            System.out.print(b[i]+" ");
         }
         System.out.println();
     }
