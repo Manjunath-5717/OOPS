@@ -1,6 +1,6 @@
 public class Happy {
  public static void main(String[] args) {
-    int n=19;
+    int n=17;
     if(n==1 ||n==7){
         System.out.println("it is a happy number");
 
