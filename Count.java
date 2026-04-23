@@ -1,10 +1,10 @@
 public class Count {
     
     static int countt(int num){
-        int count=0;
+        int sum=0;
         while(num!=0){
             int digit=num%10;
-            count++; 
+            sum=sum+digit;
             num=num/10;
 
         }

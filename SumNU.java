@@ -10,7 +10,6 @@ public class SumNU {
         }
         return sum;
     }
-
     public static void main(String[] args) {
         int n=countt(145);
         System.out.println(n);

@@ -1,33 +1,27 @@
 public class Aram{
     public static void main(String[] args) {
-        int n=153;
-        int original=n; 
-        int count=0;
+        int n=145;
+        int original=n;
         int sum=0;
-        int temp=n;
 
-        while(temp!=0){
-            count++;
-            temp=temp/10;
-        }
-        temp=n;
+        while(n!=0){
+            int digit=n%10;
 
-        while(temp!=0){  //153
-            int digit=temp%10; //3,2,1
-             
-            int power=1;
-            for(int i=1;i<=3;i++){
-                power=power*digit;//27+125+1
+            int fact=1;
+            for(int i=1;i<=digit;i++){
+                fact=fact*i;
             }
-            sum=sum+power;//27+125+1=153
-            temp=temp/10; //1
-            
+            sum=sum+fact;
+            n=n/10;
+           
         }
-        if(sum==original){
-            System.out.println("AramStrong NUmber");
+         
+        if(original==sum){
+            System.out.println("it is strong number");
         }else{
-            System.out.println("it is not a AramStrong Number");
+            System.out.println("it is not a strong number");
         }
+
+
     }
-    
 }
