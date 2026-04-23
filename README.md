@@ -1,142 +1,190 @@
-# Motivation Quotes – Frontend
+# Object-Oriented Programming (OOP) Concepts
 
-## What the project does
+## 📌 Introduction
 
-This project is a simple frontend web application that allows users to add and view motivational quotes. It communicates with a remote backend API to store quotes and retrieve all saved quotes.
-
-The application:
-
-* Lets users submit a text quote through a form
-* Sends the quote to a backend using a JSON POST request
-* Fetches and displays all stored quotes from the backend
-* Updates the quote list dynamically without page reload
-
-This project focuses on **frontend logic and API interaction** using plain JavaScript.
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of **objects**, which contain data (variables) and methods (functions). It helps in organizing code, improving reusability, and making applications scalable.
 
 ---
 
-## Why this project is useful
+## 🎯 Core OOP Concepts
 
-* Demonstrates CRUD-style interaction with a backend API
-* Shows real-world usage of the Fetch API with GET and POST requests
-* Helps beginners understand frontend–backend communication
-* Can be used as a base for journal, notes, or quote-saving applications
-* Suitable for mini-projects and learning REST APIs
+### 1. Class
 
----
+A **class** is a blueprint or template used to create objects.
 
-## Project structure
+```java
+class Student {
+    String name;
+    int age;
 
-```
-.
-├── index.html     # Frontend HTML and JavaScript
-├── styles.css     # UI styling
-├── README.md
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
 ```
 
 ---
 
-## Tech Stack
+### 2. Object
 
-* HTML5
-* CSS3
-* Vanilla JavaScript
+An **object** is an instance of a class.
 
----
-
-## How to get started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/motivation-quotes-frontend.git
-cd motivation-quotes-frontend
+```java
+Student s1 = new Student();
+s1.name = "Rahul";
+s1.age = 20;
+s1.display();
 ```
 
 ---
 
-### 2. Run the frontend
+### 3. Encapsulation
 
-No installation or build step is required.
+Encapsulation means **binding data and methods together** and restricting direct access using access modifiers.
 
-You can either:
+```java
+class Account {
+    private double balance;
 
-* Open `index.html` directly in your browser, or
-* Serve it using a local server (recommended):
+    public void setBalance(double b) {
+        balance = b;
+    }
 
-```bash
-python -m http.server 8000
-```
-
-Then open:
-
-```
-http://localhost:8000
-```
-
----
-
-## Backend integration
-
-The frontend connects to a deployed backend API:
-
-```
-https://journal-backend-vjrg.onrender.com
-```
-
-### Available endpoints used
-
-* `GET /read_quote` – Fetch all saved quotes
-* `POST /add_quote` – Add a new quote
-
----
-
-## API usage examples
-
-### Add a quote
-
-```js
-fetch(`${API_URL}/add_quote`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ quote: "Stay consistent" })
-});
-```
-
-### Read quotes
-
-```js
-fetch(`${API_URL}/read_quote`);
+    public double getBalance() {
+        return balance;
+    }
+}
 ```
 
 ---
 
-## UI features
+### 4. Inheritance
 
-* Blurred background image effect
-* Clean and centered layout
-* Responsive quote list rendering
-* Instant update after adding a quote
+Inheritance allows one class to **acquire properties and methods of another class**.
 
----
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
 
-## Where to get help
-
-* MDN Web Docs: [https://developer.mozilla.org/](https://developer.mozilla.org/)
-* Fetch API documentation: [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-
----
-
-## Maintainer
-
-Prashanth T
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+```
 
 ---
 
-## Future improvements
+### 5. Polymorphism
 
-* Delete and edit quotes
-* Timestamp for each quote
-* User authentication
-* Search and filter functionality
-* Improved mobile responsiveness
+Polymorphism means **many forms**.
+
+#### Method Overloading (Compile-time)
+
+```java
+class MathUtil {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+```
+
+#### Method Overriding (Run-time)
+
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+```
+
+---
+
+### 6. Abstraction
+
+Abstraction means **hiding implementation details** and showing only essential features.
+
+```java
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+```
+
+---
+
+## 🧩 Additional Concepts
+
+### Constructor
+
+A constructor is used to initialize objects.
+
+```java
+class Car {
+    String brand;
+
+    Car(String b) {
+        brand = b;
+    }
+}
+```
+
+---
+
+### Interface
+
+An interface is used to achieve full abstraction.
+
+```java
+interface Vehicle {
+    void start();
+}
+
+class Bike implements Vehicle {
+    public void start() {
+        System.out.println("Bike starts");
+    }
+}
+```
+
+---
+
+## 🚀 Advantages of OOP
+
+* Code reusability
+* Better organization
+* Easy maintenance
+* Scalability
+* Security through encapsulation
+
+---
+
+## 📚 Conclusion
+
+OOP concepts are fundamental for modern programming and are widely used in languages like Java, C++, Python, and C#. Understanding these concepts is essential for building efficient and maintainable software.
+
+---
+
+## 👨‍💻 Author
+
+Manjunath-5717
